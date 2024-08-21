@@ -1,0 +1,2 @@
+recursive-include ApiProxy/dependencies *
+prune ApiProxy/dependencies __pycache__
