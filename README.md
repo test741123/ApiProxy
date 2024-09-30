@@ -57,4 +57,8 @@ a.switchproxyIp("http://49.87.97.136:40007")
 page.get("https://www.ip138.com")
 input("第二次切换ip")
 ```
+# 接下来计划
+## 重构apiproxy，使apiproxy支持代理链,sock5代理，全局上游代理，动态更换代理，以及对指定url进行切换代理
+## 支持tls随机指纹
+## 支持整个代理端的所有接口监听，比起dp原生监听不会存在多个嵌套页面接口漏的情况
 
