@@ -129,7 +129,11 @@ class Proxy():
         """
         获取执行文件路径
         """
-        __file_path=os.path.abspath(__file__)
+        import sys
+        if getattr(sys, 'frozen', False):
+            __file_path = sys._MEIPASS
+        else:
+            __file_path=os.path.abspath(__file__)
         data_files = {}
         directories = glob.glob(os.path.join(os.path.dirname(__file_path), "dependencies/*"))
         for directory in directories:
